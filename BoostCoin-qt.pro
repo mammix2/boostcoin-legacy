@@ -72,15 +72,6 @@ win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
 win32:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
 lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
 
-## use: qmake "USE_QRCODE=1"
-## libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
-#USE_QRCODE=1
-#contains(USE_QRCODE, 1) {
-#    message(Building with QRCode support)
-#    DEFINES += USE_QRCODE
-#    LIBS += -lqrencode
-#}
-
 USE_QRCODE=1
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
