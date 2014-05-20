@@ -2,7 +2,7 @@
 
 TEMPLATE = app
 TARGET = boostcoin-qt
-VERSION = 1.1.0.1
+VERSION = 2.0.0.1
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
@@ -72,12 +72,24 @@ win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
 win32:QMAKE_LFLAGS += -static-libgcc -static-libstdc++
 lessThan(QT_MAJOR_VERSION, 5): win32: QMAKE_LFLAGS *= -static
 
+## use: qmake "USE_QRCODE=1"
+## libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
+#USE_QRCODE=1
+#contains(USE_QRCODE, 1) {
+#    message(Building with QRCode support)
+#    DEFINES += USE_QRCODE
+#    LIBS += -lqrencode
+#}
+
+USE_QRCODE=1
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
 contains(USE_QRCODE, 1) {
     message(Building with QRCode support)
     DEFINES += USE_QRCODE
-    LIBS += -lqrencode
+    macx:LIBS += -lqrencode
+    win32:INCLUDEPATH +=$$QRENCODE_INCLUDE_PATH
+    win32:LIBS += $$join(QRENCODE_LIB_PATH,,-L) -lqrcodelib
 }
 
 # use: qmake "USE_UPNP=1" ( enabled by default; default)
