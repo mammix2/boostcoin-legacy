@@ -41,8 +41,8 @@
         <file alias="staking_on">res/icons/staking_on.png</file>
         <file alias="bitcoin">res/icons/bitcoin.png</file>
         <file alias="bitcoin_testnet">res/icons/bitcoin_testnet.png</file>
-        <file alias="toolbar">res/icons/Boost_Logo3D_700x700_No_BG_16x16x32.png</file>
-        <file alias="toolbar_testnet">res/icons/Boost_Logo3D_700x700_No_BG_16x16x32 testnet.png</file>
+        <file alias="toolbar">res/icons/Boost_Coin_Round_NO_BG_16x16x32.png</file>
+        <file alias="toolbar_testnet">res/icons/Boost_Coin_Round_NO_BG_16x16x32_testnet.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>

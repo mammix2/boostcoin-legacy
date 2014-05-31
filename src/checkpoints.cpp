@@ -24,8 +24,14 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 0,      hashGenesisBlock )
-        
+        ( 0, hashGenesisBlock )
+        ( 100, CheckBlock1 )
+        ( 1000, CheckBlock2 )
+        ( 5002, CheckBlock3 )
+        ( 10000, CheckBlock4 )
+        ( 15001, CheckBlock5 )
+        ( 25002, CheckBlock6 )
+        ( 30001, CheckBlock7 )
     ;
 
     // TestNet has no checkpoints

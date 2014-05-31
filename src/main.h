@@ -55,6 +55,14 @@ static const int fHaveUPnP = false;
 static const uint256 hashGenesisBlock("00000e81cae8e8cbbf9679d53ff1df5e23062dc667a332fd121f86e68f5d25e3");
 static const uint256 hashGenesisBlockTestNet("0000bfc0a4fd7d2215718380aae7e92f0821b0c4785a64039b173840ea1c36fb");
 
+static const uint256 CheckBlock1 ("000000ff3b169878019e2ef990113cb47dfe4b92d18f49ac0233011b89d0ae3b"); // Checkpoint at block 100
+static const uint256 CheckBlock2 ("00000000087645f692b29da415d7cc55e0d0925ed1492c4703c2c4b634b8f29b"); // Checkpoint at block 1000
+static const uint256 CheckBlock3 ("0000000007499ff2a0bad402934236edb780872b3c3defe5f1612981b2307c8b"); // Checkpoint at block 5002
+static const uint256 CheckBlock4 ("000000000d0d85fcccc2c8e1e36ade1427006ec7ebdac9f9d7499c11251bb1fc"); // Checkpoint at block 10000
+static const uint256 CheckBlock5 ("000000000470415c747542f89ff3aaeb0e5387f0132035c9370fe7503796ca28"); // Checkpoint at block 15001
+static const uint256 CheckBlock6 ("00000000003d118a65638737be61aba2f8ff9f655d60153bb3c8607003f73e10"); // Checkpoint at block 25002
+static const uint256 CheckBlock7 ("000000000065dfe36520036c8c414baf9986a948fe9f793437f5e45c9c4ccd68"); // Checkpoint at block 30001
+
 inline int64_t PastDrift(int64_t nTime)   { return nTime - 24 * 60 * 60; } // up to 1 day from the past
 inline int64_t FutureDrift(int64_t nTime) { return nTime + 24 * 60 * 60; } // up to 1 day from the future
 
